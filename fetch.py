@@ -28,8 +28,8 @@ with open(PATH + NAME, "wb") as f:
 
 with open(PATH + NAME, "w+") as f:
     config = f.read()
-    dict = yaml.load(config)
-    dict['external-controller'] = "127.0.0.1:1234"
+    diction = yaml.load(config)
+    diction['external-controller'] = "127.0.0.1:1234"
     yaml.dump(dict, f)
 
 os.system('pm2 restart clash-linux')
